@@ -1,0 +1,21 @@
+<%- include('includes/head.ejs')%>
+  <body>
+    <header>express_webpack_template</header>
+    <main>
+      <h1>express_webpack_template</h1>
+      <form action="/" method="POST">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+        <div class="input-wrapper">
+          <label for="name">Nome do cliente</label>
+          <input name="name" type="text" /><br />
+        </div>
+
+        <div class="input-wrapper">
+          <label for="other">Outro campo</label>
+          <input name="other" type="text" />
+        </div>
+        <button>Hello World</button>
+      </form>
+    </main>
+<%- include('includes/footer')%>
+</html>
