@@ -1,21 +1,28 @@
-<%- include('includes/head.ejs')%>
-  <body>
-    <header>express_webpack_template</header>
-    <main>
-      <h1>express_webpack_template</h1>
-      <form action="/" method="POST">
-        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
-        <div class="input-wrapper">
-          <label for="name">Nome do cliente</label>
-          <input name="name" type="text" /><br />
-        </div>
+<%- include('includes/nav') %> <%- include('includes/head') %>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8 my-3">
+      <h1 class="text-center">Agenda</h1>
+      <p class="text-center lead">Seus contatos estão abaixo</p>
 
-        <div class="input-wrapper">
-          <label for="other">Outro campo</label>
-          <input name="other" type="text" />
+      <div class="row">
+        <div class="col my-3">
+          <div class="alert alert-danger">Um erro qualquer</div>
         </div>
-        <button>Hello World</button>
-      </form>
-    </main>
-<%- include('includes/footer')%>
-</html>
+      </div>
+      <div class="responsive-table">
+        <table class="table my-3">
+          <tr>
+            <td>Matheus</td>
+            <td>Nascimento</td>
+            <td>99999999999</td>
+            <td>matheusnascimento@gmail.com</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="col-lg-2"></div>
+  </div>
+</div>
+<%- include('includes/footer') %>
