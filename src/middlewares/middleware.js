@@ -5,9 +5,11 @@ exports.middleware = (req, res, next) => {
 };
 
 exports.checkCsurfError = (error, req, res, next) => {
-  if (error && "EBADCSRFTOKEN" === error.code) {
+  if (error) {
     return res.render("404");
   }
+
+  next();
 };
 
 exports.csrfMiddleware = (req, res, next) => {
