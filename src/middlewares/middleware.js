@@ -1,6 +1,6 @@
 exports.middleware = (req, res, next) => {
-  res.locals.anVariable = "variable value";
-
+  res.locals.errors = req.flash("errors");
+  res.locals.success = req.flash("success");
   next();
 };
 
